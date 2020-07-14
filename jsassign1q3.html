@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Write a JavaScript program to get the current date.</title>
+</head>
+<body>
+    <p id="GFG_up"></p>
+        <button onclick="gfg_RUN()">get date</button>
+        <p id="GFG_down"></p>
+    <script>
+        var el_up=document.getElementById("GFG_up");
+        var el_down=document.getElementById("GFG_down");
+        var today=new Date();
+        el_up.innerHTML=today;
+        var dd=today.getDate();
+        var mm=today.getMonth()+1;
+        var yyyy=today.getFullYear();
+        if(dd<10){
+            dd='0'+dd;
+        }
+        if(mm<10){
+            mm='0'+mm;
+        }
+        var today=dd+'/'+mm+'/'+yyyy;
+        function gfg_RUN(){
+            el_down.innerHTML=today;
+        }
+    </script>
+</body>
+</html>
