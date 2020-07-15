@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            Question 1
+        </title>
+    </head>
+    <h2> VARIOUS METHODS IN CONSOLE FUNCTION</h2>
+    <body>
+        <h3><u>console log</u></h3>
+                <script>
+                console.log('abc');  
+                console.log(1); 
+                console.log(true); 
+                console.log(null); 
+                console.log(undefined);  
+                console.log([1, 2, 3, 4]);  
+                </script>
+                <p> Mainly used to log(print) the output to the console. We can put any type inside the log(), be it a string, array, object, boolean etc.</p>
+        <h3><u>console error</u></h3>
+                <script>
+                console.error('This is an error');  
+                </script>
+                <p>Used to log error message to the console. Useful in testing of code. By default the error message will be highlighted with red color</p>
+         <h3> <u>console warning </u></h3>
+                <script>
+                console.warn('This is a warning.');
+                </script>
+                <p>Used to log warning message to the console. By default the warning message will be highlighted with yellow color.</p>
+         <h3><u>console clear</u></h3>
+                <script>
+                console.clear();
+                </script>
+                <p>Used to clear the console. The console will be cleared, in case of Chrome a simple overlayed text will be
+                    printed like : ‘Console was cleared’ while in firefox no message is returned.</p>
+        <h3><u>console time</u></h3>
+                <script>
+                 console.time('time taken'); 
+                 let fun =  function()
+                 { 
+                   console.log('fun is running'); 
+                } 
+                let fun2 = function()
+                { 
+                 console.log('fun2 is running..'); 
+                } 
+                fun(); // calling fun(); 
+                fun2(); // calling fun2(); 
+                console.timeEnd('time taken');
+                </script>
+                <p>Whenever we want to know the amount of time spend by a block or a function,
+                     we can make use of the time() and timeEnd() methods provided by the javascript console object.
+                     They take a label which must be same, and the code inside can be anything( function, object, simple console).</p>
+        <h3><u>console table</u></h3>
+              <script>
+              console.table({'a':1, 'b':2, 'c':3});
+              </script>
+              <p>This method allows us to generate a table inside a console.
+                   The input must be an array or an object which will be shown as a table.</p>
+        <h3><U>console count</U> </h3>
+        <script>
+            for(let i=0;i<5;i++)
+            {
+            for(let j=0;j<5;j++)
+            { 
+             console.count(i); 
+            } 
+            }  
+        </script>
+        <p> This method is used to count the number that the function hit by this counting method</p>
+        <h3><U>console group</U></h3>
+        <script>
+                console.group('simple'); 
+                console.warn('warning!'); 
+                console.error('error here'); 
+                console.log('letsupgrade'); 
+                console.groupEnd('simple'); 
+                console.log('new section'); 
+        </script>
+        <p>group() and groupEnd() methods of the console object allows us to group contents in a separate block, which will be indented.
+           Just like the time() and the timeEnd() they also accepts label, again of same value.</p>
+    </body>
+
+
+</html>

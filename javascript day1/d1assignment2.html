@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <tittle>
+            Question 2
+        </tittle>
+    </head>
+    <body>
+        <h1>  var  </h1>
+        <p>The var statement declares a variable.
+            Variables are containers for storing information.</p>
+        <script>
+            var carName;
+            carName = "Volvo";
+            console.log(carName);
+            var Name = "BMW";
+            console.log(Name);
+            var x = 5;
+            var y = 6;
+            console.log(x);
+            console.log(y);
+        </script>
+        <h1> let </h1>
+        <p> Variables declared Globally (outside any function) have Global Scope
+            Variables declared inside a block {} cannot be accessed from outside the block
+            Redeclaring a variable using the let keyword can solve this problem.
+            Redeclaring a variable inside a block will not redeclare the variable outside the block
+
+        </p>
+        <script>
+            var x = 10;
+              console.log(x);
+            {
+              let x = 2;
+              console.log(x);
+            }
+              console.log(x);
+        </script>
+        <h1>const</h1>
+        <p>javaScript const variables must be assigned a value when they are declared
+            If we assign a primitive value to a constant, we cannot change the primitive value
+         </p>
+         <script>
+                    const PI = 3.141592653589793;
+                    PI = 3.14;      // This will give an error
+                    PI = PI + 10;   // This will also give an error  
+                    // You can create a const object:
+                    const car = {type:"Fiat", model:"500", color:"white"};
+                    car.color = "red";
+                    car.owner = "Johnson";
+         </script>
+    </body>
+</html>
