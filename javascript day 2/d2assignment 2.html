@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+</head>
+<body>
+    <h2>String and arrays and its methods explained with examples</h2>  
+    <h1>STRINGS</h1>      <hr>
+    <h3>Here are two ways to create a String in Java</h3>
+    <ul>
+        <li> String literal</li>
+        <li> Using new keyword</li>
+    </ul>
+    <hr>
+    <h3>String literal</h3>
+    In java, Strings can be created like this: Assigning a String literal to a String instance:
+    <span>
+    String str1 = "Welcome";<br>
+    String str2 = "Welcome";
+    </span>
+    <hr>
+    <h3>Using New Keyword</h3>
+    <span> 
+    String str1 = new String("Welcome");<br>
+    String str2 = new String("Welcome");
+    </span>
+    <hr>    
+    A Simple Java String Example<br>
+    public class Example{  <br>
+       public static void main(String args[]){  <br>
+        //creating a string by java string literal <br>
+        String str = "Beginnersbook"; <br>
+        char arrch[]={'h','e','l','l','o'}; <br>
+        //converting char array arrch[] to string str2<br>
+        String str2 = new String(arrch); <br>
+        //creating another java string str3 by using new keyword<br> 
+        String str3 = new String("Java String Example"); <br>
+        //Displaying all the three strings<br>
+        System.out.println(str);  <br>
+        System.out.println(str2);  <br>
+        System.out.println(str3);  
+       }
+    }
+    <hr>
+    <p> char charAt(int index): It returns the character at the specified index. Specified index value should be between 0 to length() -1 both inclusive. It throws IndexOutOfBoundsException if index<0||>= length of String.</p>
+    <p> boolean equals(Object obj): Compares the string with the specified string and returns true if both matches else false.</p>
+    <p> boolean equalsIgnoreCase(String string): It works same as equals method but it doesn’t consider the case while comparing strings. It does a case insensitive comparison.</p>
+    <p> int compareTo(String string): This method compares the two strings based on the Unicode value of each character in the strings.</p>
+    <p> int compareToIgnoreCase(String string): Same as CompareTo method however it ignores the case during comparison.</p>
+    <p> boolean startsWith(String prefix, int offset): It checks whether the substring (starting from the specified offset index) is having the specified prefix or not.</p>
+    <p> boolean startsWith(String prefix): It tests whether the string is having specified prefix, if yes then it returns true else false.</p>
+    <p> boolean endsWith(String suffix): Checks whether the string ends with the specified suffix.</p>
+    <p> int hashCode(): It returns the hash code of the string.
+    <p> int indexOf(int ch): Returns the index of first occurrence of the specified character ch in the string.</p>
+    <p> int indexOf(int ch, int fromIndex): Same as indexOf method however it starts searching in the string from the specified fromIndex.</p>
+    <p> int lastIndexOf(int ch): It returns the last occurrence of the character ch in the string.</p>
+    <p> int lastIndexOf(int ch, int fromIndex): Same as lastIndexOf(int ch) method, it starts search from fromIndex.</p>
+    <p> int indexOf(String str): This method returns the index of first occurrence of specified substring str.</p>
+    <p> int lastindexOf(String str): Returns the index of last occurrence of string str.</p>
+    <p> String substring(int beginIndex): It returns the substring of the string. The substring starts with the character at the specified index.</p>
+    <p> String substring(int beginIndex, int endIndex): Returns the substring. The substring starts with character at beginIndex and ends with the character at endIndex.</p>
+    <p> String concat(String str): Concatenates the specified string “str” at the end of the string.</p>
+    <p> String replace(char oldChar, char newChar): It returns the new updated string after changing all the occurrences of oldChar with the newChar.</p>
+    <p> boolean contains(CharSequence s): It checks whether the string contains the specified sequence of char values. If yes then it returns true else false. It throws NullPointerException of ‘s’ is null.</p>
+    <p> String toUpperCase(Locale locale): Converts the string to upper case string using the rules defined by specified locale.</p>
+    <p> String toUpperCase(): Equivalent to toUpperCase(Locale.getDefault()).</p>
+    <p> public String intern(): This method searches the specified string in the memory pool and if it is found then it returns the reference of it, else it allocates the memory space to the specified string and assign the reference to it.</p>
+    <p> public boolean isEmpty(): This method returns true if the given string has 0 length. If the length of the specified Java String is non-zero then it returns false.</p>
+    <p> public static String join(): This method joins the given strings using the specified delimiter and returns the concatenated Java String</p>
+    <p> String replaceFirst(String regex, String replacement): It replaces the first occurrence of substring that fits the given regular expression “regex” with the specified replacement string.</p>
+    <p> String replaceAll(String regex, String replacement): It replaces all the occurrences of substrings that fits the regular expression regex with the replacement string.</p>
+    <p> String[] split(String regex, int limit): It splits the string and returns the array of substrings that matches the given regular expression. limit is a result threshold here.</p>
+    <p> String[] split(String regex): Same as split(String regex, int limit) method however it does not have any threshold limit.</p>
+    <p> String toLowerCase(Locale locale): It converts the string to lower case string using the rules defined by given locale.</p>
+    <p> public static String format(): This method returns a formatted java String</p>
+    <p> String toLowerCase(): Equivalent to toLowerCase(Locale. getDefault()).</p>
+    <p> String trim(): Returns the substring after omitting leading and trailing white spaces from the original string.</p>
+    <p> char[] toCharArray(): Converts the string to a character array.</p>
+    <p> static String copyValueOf(char[] data): It returns a string that contains the characters of the specified character array.</p>
+    <p> static String copyValueOf(char[] data, int offset, int count): Same as above method with two extra arguments – initial offset of subarray and length of subarray.</p>
+    <p> void getChars(int srcBegin, int srcEnd, char[] dest, int destBegin): It copies the characters of src array to the dest array. Only the specified range is being copied(srcBegin to srcEnd) to the dest subarray(starting fromdestBegin).</p>
+    <p> static String valueOf(): This method returns a string representation of passed arguments such as int, long, float, double, char and char array.</p>
+    <p> boolean contentEquals(StringBuffer sb): It compares the string to the specified string buffer.</p>
+    <p> boolean regionMatches(int srcoffset, String dest, int destoffset, int len): It compares the substring of input to the substring of specified string.</p>
+    <p> boolean regionMatches(boolean ignoreCase, int srcoffset, String dest, int destoffset, int len): Another variation of regionMatches method with the extra boolean argument to specify whether the comparison is case sensitive or case insensitive.</p>
+    <p> byte[] getBytes(String charsetName): It converts the String into sequence of bytes using the specified charset encoding and returns the array of resulted bytes.</p>
+    <p> byte[] getBytes(): This method is similar to the above method it just uses the default charset encoding for converting the string into sequence of bytes.</p>
+    <p> int length(): It returns the length of a String.</p>
+    <p> boolean matches(String regex): It checks whether the String is matching with the specified regular expression regex.</p>
+    <p> int codePointAt(int index):It is similar to the charAt method however it returns the Unicode code point value of specified index rather than the character itself.</p>
+    <hr>
+    <h1>ARRAYS</h1>
+    <hr>
+    <h3>To add/remove elements:</h3>
+
+    <p>
+    push(...items) – adds items to the end,<br>
+    pop() – extracts an item from the end,<br>
+    shift() – extracts an item from the beginning,<br>
+    unshift(...items) – adds items to the beginning.<br>
+    splice(pos, deleteCount, ...items) – at index pos delete deleteCount elements and insert items.<br>
+    slice(start, end) – creates a new array, copies elements from position start till end (not inclusive) into it.<br>
+    concat(...items) – returns a new array: copies all members of the current one and adds items to it. If any of items
+     is an array, then its elements are taken.
+    </p>
+
+    <h3>To search among elements:</h3>
+    <p>
+    indexOf/lastIndexOf(item, pos) – look for item starting from position pos, return the index or -1 if not found.<br>
+    includes(value) – returns true if the array has value, otherwise false.<br>
+    find/filter(func) – filter elements through the function, return first/all values that make it return true.<br>
+    findIndex is like find, but returns the index instead of a value.
+    </p>
+    <h3>To iterate over elements:</h3>
+    <p>
+    forEach(func) – calls func for every element, does not return anything.
+    </p>
+    <h3>To transform the array:</h3>
+    <p>
+    map(func) – creates a new array from results of calling func for every element.<br>
+    sort(func) – sorts the array in-place, then returns it.<br>
+    reverse() – reverses the array in-place, then returns it.<br>
+    split/join – convert a string to array and back.<br>
+    reduce(func, initial) – calculate a single value over the array by calling func for each element and passing an intermediate result
+     between the calls.
+    </p>
+    <h4>Additionally:</h4>
+    <p>
+    Array.isArray(arr) checks arr for being an array.<br>
+    arr.some(fn)/arr.every(fn) checks the array.<br>
+    The function fn is called on each element of the array similar to map. If any/all results are true, returns true, otherwise false.<br>
+    arr.fill(value, start, end) – fills the array with repeating value from index start to end.<br>
+    arr.copyWithin(target, start, end) – copies its elements from position start till position end into itself, at position target
+     (overwrites existing).
+    </p>
+    <hr>
+</body>
+</html>
