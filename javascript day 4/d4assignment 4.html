@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question </title>
+</head>
+<body>
+    <form name="myform">
+        First value:
+        <input type="text" name="first"><br><br>
+        Second value:
+        <input type="text" name="second"><br><br>
+        Perform a operation:<br>
+        <input type="button" value="ADD" onclick="add()">
+        <input type="button" value="SUBTRACT" onclick="sub()">
+        <input type="button" value="MULTIPLY" onclick="mul()">
+        <input type="button" value="DIVIDE" onclick="div()">
+      <input type="button" value="SQUARE ROOT" onclick="sqr()">
+       <input type="button" value="PERCENTAGE" onclick="per()"><br><br>
+        Result:
+        <input type="text" name="result">
+    </form>
+    <script>
+        function add()
+        {
+            first=parseInt(myform.first.value);
+            second=parseInt(myform.second.value);
+            result=first+second;
+            myform.result.value=result;
+        }
+        function sub()
+        {
+            first=parseInt(myform.first.value);
+            second=parseInt(myform.second.value);
+            result=first-second;
+            myform.result.value=result;
+        }
+        function mul()
+        {
+            first=parseInt(myform.first.value);
+            second=parseInt(myform.second.value);
+            result=first*second;
+            myform.result.value=result;
+        }
+        function div()
+        {
+            first=parseInt(myform.first.value);
+            second=parseInt(myform.second.value);
+            result=first/second;
+            myform.result.value=result;
+        }
+      function sqr()
+        {
+            first=parseInt(myform.first.value);
+            second=parseInt(myform.second.value);
+			var result = Math.sqrt(first);
+           // result = math.sqrt(c);
+            myform.result.value=result;
+        }
+        function per()
+        {
+            first=parseInt(myform.first.value);
+            second=parseInt(myform.second.value);
+            result=first%second;
+            myform.result.value=result;
+        }
+    </script>
+</body>
+</html>
