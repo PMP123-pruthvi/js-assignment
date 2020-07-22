@@ -3,18 +3,39 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Question 1</title>
+    <title>Document</title>
 </head>
 <body>
     <script>
+        let i = 0;
+        let acc = [];
+       while(1){
+        let num = prompt ("enter the array of numbers");
+        if(num==0)
+        {
+            break;
+        }
+        let numArray = Math.abs(num)
+         acc[i] = numArray;
+        i++;
+        
 
-        let arr = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15,16,17,18,19,20];
-        let odd = arr.filter(el=>el%2!=0);
+       
+       }
+       console.log(acc);
+       let odd = acc.filter(el=>el%2!=0);
+       console.log("odd numbers")
         console.log(odd);
 
 
-    let oddcube = arr.filter(el=>el%2!=0).map(el=>el**3);
+    let oddcube = acc.filter(el=>el%2!=0).map(el=>el**3);
+    console.log("cube of odd numbers");
     console.log(oddcube);
+        
+        
+
+       
     </script>
+    
 </body>
 </html>
