@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question 2</title>
+    <script type="text/javascript">
+    function printTable(){
+        var num;
+        num=Number(document.getElementById('txtNumber').value);
+        for(var i=1;i<=10;i++){
+            var pTag=document.getElementById('pPrint');
+            pTag.innerText += num + "x" + i + "="
+            pTag.innerHTML += (num*i)+"<br/>"
+        }
+    }
+    </script>
+</head>
+<body>
+    <h2>
+    function to display table of a entered number.
+    </h2>
+    <p><input type="text" id="txtNumber" placeholder="enter number"></p>
+    <p><input type="button" value="print Table."onclick='printTable()'/></p>
+    <p id="pPrint"></p>
+    </body>
+    <script>
+        function multiplyBy()
+{
+    num1=document.getElementById("firstNumber").value;
+    num2=document.getElementById("secondNumber").value;
+    document.getElementById("result").innerHTML=num1*num2;
+}
+    </script>
+</html>
